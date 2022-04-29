@@ -31,6 +31,7 @@ static int alive = -1;
 
 char dst_ip[20] = { 0 };
 int dst_port;
+unsigned short inline checksum (unsigned short *buffer, unsigned short size) ;
 
 struct ip{
 	unsigned char       hl;
