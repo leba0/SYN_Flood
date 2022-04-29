@@ -272,6 +272,7 @@ main(int argc, char *argv[])
 	}
 
 	/* 等待线程结束 */
+	/*
 	for(i=0; i<MAXCHILD; i++)
 	{
 		err = pthread_join(pthread[i], NULL);
@@ -281,7 +282,15 @@ main(int argc, char *argv[])
 			exit(1);
 		}
 	}
-
+	*/
+	
+	if(argc > 3)
+        {
+                sleep(atoi(argv[3]));
+        } else {
+                 sleep(10);
+        }
+	alive = 0;
 	close(sockfd);
 
 	return 0;
