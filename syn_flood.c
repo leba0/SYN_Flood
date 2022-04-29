@@ -31,7 +31,7 @@ static int alive = -1;
 
 char dst_ip[20] = { 0 };
 int dst_port;
-unsigned short inline checksum (unsigned short *buffer, unsigned short size) ;
+unsigned short checksum (unsigned short *buffer, unsigned short size) ;
 
 struct ip{
 	unsigned char       hl;
@@ -68,8 +68,7 @@ struct pseudohdr
 };
 
 /* CRC16校验 */
-unsigned short inline
-checksum (unsigned short *buffer, unsigned short size)     
+unsigned short checksum (unsigned short *buffer, unsigned short size)     
 {  
 
 	unsigned long cksum = 0;
